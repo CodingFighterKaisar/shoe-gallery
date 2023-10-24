@@ -1,11 +1,12 @@
-import React from 'react';
+import React from "react";
+import CarouselWithContent from "../../Component/CarouselWithContent/CarouselWithContent";
 
 const Home = () => {
-    return (
-        <div className="container">
-            <h2>This is Home page</h2>
-        </div>
-    );
+  return (
+    <div className="container">
+      <CarouselWithContent></CarouselWithContent>
+    </div>
+  );
 };
 
 export default Home;
