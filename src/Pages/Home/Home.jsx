@@ -1,10 +1,10 @@
 import React from "react";
-import CarouselWithContent from "../../Component/CarouselWithContent/CarouselWithContent";
+import Sliders from "../../Component/Sliders/Sliders";
 
 const Home = () => {
   return (
-    <div className="container">
-      <CarouselWithContent></CarouselWithContent>
+    <div>
+      <Sliders></Sliders>
     </div>
   );
 };
