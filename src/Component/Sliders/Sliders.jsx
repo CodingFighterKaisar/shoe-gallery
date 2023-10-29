@@ -1,7 +1,7 @@
 import React, { useState } from "react";
-import kidzShoe from "../../assets/images/carousel/kidz.jpg";
-import formalShoe from "../../assets/images/carousel/formal.jpg";
-import sportsShoe from "../../assets/images/carousel/style.jpg";
+import collection from "../../assets/images/carousel/collection.jpg";
+import choice from "../../assets/images/carousel/choice.jpg";
+import footwear from "../../assets/images/carousel/footwear.jpg";
 import { GrCaretPrevious, GrCaretNext } from "react-icons/gr";
 import { RxDotFilled } from "react-icons/rx";
 
@@ -9,21 +9,24 @@ const Sliders = () => {
   const slides = [
     {
       slideId: 1,
-      slideImg: kidzShoe,
-      slideTitle: "Kidz Shoe",
-      slideTest: "Kidz Shoe collection are available here",
+      slideImg: collection,
+      slideTitle: "collection",
+      slideTest:
+        " Lorem ipsum dolor sit amet consectetur adipisicing elit. Itaque culpa tempora ullam quidem, magni delectus, incidunt voluptate natus aut enim perspiciatis, tenetur quaerat ex aliquid maiores corporis provident quia? Dolorem!",
     },
     {
       slideId: 2,
-      slideImg: formalShoe,
-      slideTitle: "Formal Shoes",
-      slideTest: "Formal Shoes are available here",
+      slideImg: choice,
+      slideTitle: "Your Choice",
+      slideTest:
+        " Lorem ipsum dolor sit amet consectetur adipisicing elit. Itaque culpa tempora ullam quidem, magni delectus, incidunt voluptate natus aut enim perspiciatis, tenetur quaerat ex aliquid maiores corporis provident quia? Dolorem!",
     },
     {
       slideId: 3,
-      slideImg: sportsShoe,
-      slideTitle: "Sports Shoes",
-      slideTest: "Sportsl Shoes are available here",
+      slideImg: footwear,
+      slideTitle: "footwear",
+      slideTest:
+        " Lorem ipsum dolor sit amet consectetur adipisicing elit. Itaque culpa tempora ullam quidem, magni delectus, incidunt voluptate natus aut enim perspiciatis, tenetur quaerat ex aliquid maiores corporis provident quia? Dolorem!",
     },
   ];
 
@@ -46,29 +49,31 @@ const Sliders = () => {
   };
 
   return (
-    <div className="w-9/11 h-[30%] m-auto px-4 relative group py-4">
+    <div className="w-full relative group py-4">
       <div
         style={{ backgroundImage: `url(${slides[currentIndex].slideImg})` }}
         alt=""
         className="w-[95%] h-[550px] mx-auto rounded-2xl bg-center bg-cover duration-500"
       >
-        <div className="h-full mx-auto flex justify-center items-center ">
-          <div className="flex flex-col gap-4 justify-center mx-20 lg:w-3/6 sm:w-full bg-blue-300 p-6 rounded-lg bg-opacity-60 sm:p-4 shadow-2xl">
-            <h2 className="lg:text-5xl md:text-2xl  sm:text-2xl font-bold sm:font-bold text-center bg-gradient-to-r from-red-200 to-red-600 py-2 text-white">
-              {slides[currentIndex].slideTitle}
-            </h2>
-            <p className="text-gray-800 md:text-2xl lg:text-2xl sm:texl-xs text-center py-2">
-              Lorem, ipsum dolor sit amet consectetur adipisicing elit. At
-              doloribus, ullam, molestias cumque dolorum molestiae voluptatem
-              sint ipsam similique tempore eius
-            </p>
-            <div className="flex justify-center items-center gap-6 py-2">
-              <button className="bg-blue-400 hover:bg-blue-600 px-4 rounded-md  text-lg hover:text-white font-semibold py-2">
-                Gallery
-              </button>
-              <button className="bg-blue-400 hover:bg-blue-600 px-4 rounded-md  text-lg hover:text-white font-semibold py-2">
-                Contact
-              </button>
+        <div className="h-full flex justify-center items-center ">
+          <div className="flex flex-col gap-4 justify-center lg:w-full lg:h-full sm:w-full  rounded-lg bg-opacity-60 sm:p-4 shadow-2xl bg-gray-400 ">
+            <div className="w-2/4 mx-auto flex flex-col justify-center items-center gap-6 ">
+              <h2 className="lg:text-5xl md:text-2xl rounded-lg sm:text-2xl font-bold sm:font-bold text-center text-yellow-900 shodow-xl">
+                {slides[currentIndex].slideTitle}
+              </h2>
+              <p className="text-gray-800 md:text-2xl lg:text-2xl sm:texl-xs text-center py-2">
+                Lorem, ipsum dolor sit amet consectetur adipisicing elit. At
+                doloribus, ullam, molestias cumque dolorum molestiae voluptatem
+                sint ipsam similique tempore eius
+              </p>
+              <div className="flex justify-center items-center gap-6 py-2">
+                <button className="bg-blue-400 hover:bg-blue-600 px-4 rounded-md  text-lg hover:text-white font-semibold py-2">
+                  Gallery
+                </button>
+                <button className="bg-blue-400 hover:bg-blue-600 px-4 rounded-md  text-lg hover:text-white font-semibold py-2">
+                  Contact
+                </button>
+              </div>
             </div>
           </div>
         </div>

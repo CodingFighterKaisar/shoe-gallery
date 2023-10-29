@@ -12,7 +12,7 @@ const Header = () => {
 
   const toggleOpen = () => setOpen((cur) => !cur);
   const navList = (
-    <ul className="mt-2 mb-4 flex flex-col gap-2 lg:mb-0 lg:mt-0 lg:flex-row lg:items-center lg:gap-6">
+    <ul className="mt-2 mb-4 flex flex-col gap-2 lg:mb-0 lg:mt-0 lg:flex-row lg:items-center lg:gap-6 text-black">
       <Typography
         as="li"
         variant="small"
@@ -56,13 +56,13 @@ const Header = () => {
     </ul>
   );
   return (
-    <Navbar className="sticky top-0 z-10 h-max max-w-full rounded-none px-4 py-2 lg:px-8 lg:py-4 text-black-500">
+    <Navbar className="sticky top-0 z-10 h-max max-w-full rounded-none px-4 py-2 lg:px-8 lg:py-4 text-black-500 bg-blue-500">
       <div className="flex items-center justify-between text-blue-gray-900">
         <Typography className="text-lg flex justify-center items-center">
           <img src={logo} className="w-12" alt="" />
           <span className="text-md text-blue-800 font-bold">Shoes-Gallery</span>
         </Typography>
-        <div className="flex items-center gap-4">
+        <div className="flex items-center gap-4 text-black-400">
           <div className="mr-4 hidden lg:block">{navList}</div>
           <div className="flex items-center gap-x-1">
             <Button variant="text" size="sm" className="hidden lg:inline-block">
@@ -71,9 +71,9 @@ const Header = () => {
             <Button
               variant="gradient"
               size="sm"
-              className="hidden lg:inline-block"
+              className="hidden lg:inline-block text-black"
             >
-              <span>Sign in</span>
+              <span>Register</span>
             </Button>
           </div>
           <IconButton
@@ -114,7 +114,7 @@ const Header = () => {
               fullWidth
               variant="gradient"
               size="sm"
-              className="text-blue-400"
+              className="text-black"
             >
               <span>Register</span>
             </Button>
