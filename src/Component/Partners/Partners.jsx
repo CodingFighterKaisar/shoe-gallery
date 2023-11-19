@@ -12,7 +12,7 @@ import lotto from "../../assets/images/brand/lotto.png";
 import Nike from "../../assets/images/brand/Nike.png";
 import reebok from "../../assets/images/brand/reebok.png";
 
-const Brands = () => {
+const Partners = () => {
   const brands = [
     {
       brandId: 1,
@@ -63,7 +63,7 @@ const Brands = () => {
   return (
     <div className="w-full mx-auto ">
       <h2 className="text-4xl text-center text-yellow-600 font-bold uppercase py-10">
-        Available Brands In Stock
+        Our Local Partners
       </h2>
       <div className="mx-auto container-sm px-10">
         <Slider {...settings} className="py-10">
@@ -80,4 +80,4 @@ const Brands = () => {
   );
 };
 
-export default Brands;
+export default Partners;
