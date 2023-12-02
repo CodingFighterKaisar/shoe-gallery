@@ -1,19 +1,16 @@
 // Import the functions you need from the SDKs you need
 import { initializeApp } from "firebase/app";
-
 // TODO: Add SDKs for Firebase products that you want to use
 // https://firebase.google.com/docs/web/setup#available-libraries
 
 // Your web app's Firebase configuration
-// For Firebase JS SDK v7.20.0 and later, measurementId is optional
 const firebaseConfig = {
-    apiKey: "AIzaSyAIJD_L2areiRsh7lPYRpLoDtv4TIezP98",
-    authDomain: "shoes-gallery-c1e57.firebaseapp.com",
-    projectId: "shoes-gallery-c1e57",
-    storageBucket: "shoes-gallery-c1e57.appspot.com",
-    messagingSenderId: "16430039506",
-    appId: "1:16430039506:web:d806d57de4e98ccb13080b",
-    measurementId: "G-7QEE1KEE7F"
+    apiKey: "AIzaSyD1ewmKyX9irgJdIwlrah23DvqisKZj3c4",
+    authDomain: "shoes-gallery-3746d.firebaseapp.com",
+    projectId: "shoes-gallery-3746d",
+    storageBucket: "shoes-gallery-3746d.appspot.com",
+    messagingSenderId: "344402682458",
+    appId: "1:344402682458:web:17fa4b7a080effeb20ee63"
 };
 
 // Initialize Firebase
