@@ -3,13 +3,13 @@ import React, { useContext } from 'react';
 import { CiFacebook } from "react-icons/ci";
 import { CiTwitter } from "react-icons/ci";
 import { CiInstagram } from "react-icons/ci";
-import { Link } from 'react-router-dom';
+import { Link, useNavigate } from 'react-router-dom';
 import { AuthContext } from '../../Provider/AuthProvider';
 import { RiGoogleLine } from "react-icons/ri";
 
 const Login = () => {
     const { UserLogin, GoogleLogin } = useContext(AuthContext)
-
+    const navigate = useNavigate()
     const handleLogin = (event) => {
         event.preventDefault();
         const form = event.target;
@@ -20,6 +20,8 @@ const Login = () => {
             .then(result => {
                 const loggedUser = result.user;
                 console.log(loggedUser)
+                form.reset();
+                navigate("/")
             })
             .catch(err => {
                 const errMsg = err.message;

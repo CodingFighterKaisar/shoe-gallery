@@ -20,6 +20,7 @@ import nikon from "../../assets/images/shoes/nikon.jpg";
 
 
 const Products = () => {
+
   const Products = [
     { id: 1, title: "Black Sneaker", price: 41, rating: "***", img: blacksneaker },
     { id: 2, title: "Blue Sneaker", price: 37, rating: "***", img: bluesneaker },
@@ -40,6 +41,14 @@ const Products = () => {
     { id: 17, title: "Nikon", price: 36, rating: "****", img: nikon },
     { id: 18, title: "whitesneaker", price: 16, rating: "***", img: whitesneaker },
   ];
+
+  const handleShowMoreBtn = () => {
+    console.log("its working")
+    let totalProduct = []
+    for (let i = 0; i <= Products.length; i++) {
+      totalProduct = [i]
+    }
+  }
   return (
     <div className="flex flex-col gap-8 justify-start items-left ">
       <h2 className="text-4xl font-bold text-orange-600 py-10 p-10">
@@ -51,7 +60,7 @@ const Products = () => {
         )).slice(0, 4)}
       </div>
       <div className="flex justify-center items-center">
-        <button className="text-xl bg-gray-500 hover:bg-slate-700 w-32 px-2 py-2 rounded-md text-white hover:text-orange-600">
+        <button onClick={handleShowMoreBtn} className="text-xl bg-gray-500 hover:bg-slate-700 w-32 px-2 py-2 rounded-md text-white hover:text-orange-600">
           Show More
         </button>
       </div>
