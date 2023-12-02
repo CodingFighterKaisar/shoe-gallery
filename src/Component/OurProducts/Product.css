@@ -1,0 +1,16 @@
+/* .wishProduct:hover .AddToCart {
+    background-color: #242525;
+    color: rgb(197, 115, 115);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+} */
+.wishProduct:hover .AddToCart {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.wishProduct:hover .cart {
+    filter: blur(2.5px);
+}

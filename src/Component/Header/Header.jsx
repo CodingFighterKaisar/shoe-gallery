@@ -5,10 +5,13 @@ import {
   Navbar,
   Typography,
 } from "@material-tailwind/react";
-import React, { useState } from "react";
+import React, { useContext, useState } from "react";
 import logo from "../../assets/logo/site-logo.png";
+import { Link } from "react-router-dom";
+import { AuthContext } from "../../Provider/AuthProvider";
 const Header = () => {
   const [open, setOpen] = useState(false);
+  const { user } = useContext(AuthContext)
 
   const toggleOpen = () => setOpen((cur) => !cur);
   const navList = (
@@ -20,7 +23,7 @@ const Header = () => {
         className="p-1 font-normal"
       >
         <a href="#" className="flex items-center">
-          Pages
+          Home
         </a>
       </Typography>
       <Typography
@@ -29,9 +32,15 @@ const Header = () => {
         color="blue-gray"
         className="p-1 font-normal"
       >
-        <a href="#" className="flex items-center">
-          Account
-        </a>
+        <Link to="#gallery"> Gallery</Link>
+      </Typography>
+      <Typography
+        as="li"
+        variant="small"
+        color="blue-gray"
+        className="p-1 font-normal"
+      >
+        <Link to="/cart">Cart</Link>
       </Typography>
       <Typography
         as="li"
@@ -40,17 +49,7 @@ const Header = () => {
         className="p-1 font-normal"
       >
         <a href="#" className="flex items-center">
-          Blocks
-        </a>
-      </Typography>
-      <Typography
-        as="li"
-        variant="small"
-        color="blue-gray"
-        className="p-1 font-normal"
-      >
-        <a href="#" className="flex items-center">
-          Docs
+          Showrooms
         </a>
       </Typography>
     </ul>
@@ -59,23 +58,34 @@ const Header = () => {
     <Navbar className="sticky top-0 z-10 h-max max-w-full rounded-none px-4 py-2 lg:px-8 lg:py-4 text-black-500 bg-blue-500">
       <div className="flex items-center justify-between text-blue-gray-900">
         <Typography className="text-lg flex justify-center items-center">
-          <img src={logo} className="w-12" alt="" />
-          <span className="text-md text-blue-800 font-bold">Shoes-Gallery</span>
+          <Link to="/">
+            <img src={logo} className="w-12" alt="" />
+            <span className="text-md text-blue-800 font-bold">Shoes-Gallery</span>
+          </Link>
         </Typography>
         <div className="flex items-center gap-4 text-black-400">
           <div className="mr-4 hidden lg:block">{navList}</div>
-          <div className="flex items-center gap-x-1">
-            <Button variant="text" size="sm" className="hidden lg:inline-block">
-              <span>Log In</span>
-            </Button>
-            <Button
-              variant="gradient"
-              size="sm"
-              className="hidden lg:inline-block text-black"
-            >
-              <span>Register</span>
-            </Button>
-          </div>
+          {
+            user?.id ? <>
+              <span>{user?.displayName}</span>
+              <Button variant="text" size="sm" className="hidden lg:inline-block">
+                <Link to="/login">Log In</Link>
+              </Button>
+            </> : <>
+              <div className="flex items-center gap-x-1">
+                <Button variant="text" size="sm" className="hidden lg:inline-block">
+                  <Link to="/login">Log In</Link>
+                </Button>
+                <Button
+                  variant="gradient"
+                  size="sm"
+                  className="hidden lg:inline-block text-black"
+                >
+                  <Link to="/register">Register</Link>
+                </Button>
+              </div>
+            </>
+          }
           <IconButton
             variant="text"
             className="ml-auto h-6 w-6 text-inherit hover:bg-transparent focus:bg-transparent active:bg-transparent lg:hidden"
@@ -101,14 +111,14 @@ const Header = () => {
             )}
           </IconButton>
         </div>
-      </div>
+      </div >
 
       <Collapse open={open} className="lg:hidden">
         <div className={open ? "block" : "hidden"}>
           {navList}
           <div className="flex items-center gap-x-1">
             <Button fullWidth variant="text" size="sm" className="">
-              <span>Log In</span>
+              <Link to="/login">login</Link>
             </Button>
             <Button
               fullWidth
@@ -116,12 +126,12 @@ const Header = () => {
               size="sm"
               className="text-black"
             >
-              <span>Register</span>
+              <Link to="/register">Register</Link>
             </Button>
           </div>
         </div>
       </Collapse>
-    </Navbar>
+    </Navbar >
   );
 };
 

@@ -87,10 +87,10 @@ const Sliders = () => {
         <GrCaretNext onClick={nextSlide} size={20}></GrCaretNext>
       </div>
       <div className="flex top-4 justify-center py-2 ">
-        {slides.map((slide, slideIndex) => (
+        {slides.map((slide) => (
           <div className="text-2xl cursor-pointer">
             <RxDotFilled
-              key={slideIndex}
+              key={slide.slideId}
               onClick={() => goToSlide(slideIndex)}
             ></RxDotFilled>
           </div>

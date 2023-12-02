@@ -18,130 +18,30 @@ import louis from "../../assets/images/shoes/louis.jpg";
 import nikefree from "../../assets/images/shoes/nikefree.jpg";
 import nikon from "../../assets/images/shoes/nikon.jpg";
 
+
 const Products = () => {
   const Products = [
-    {
-      id: 1,
-      title: "Black Sneaker",
-      price: 41,
-      rating: "***",
-      img: blacksneaker,
-    },
-    {
-      id: 2,
-      title: "Blue Sneaker",
-      price: 37,
-      rating: "***",
-      img: bluesneaker,
-    },
-    {
-      id: 3,
-      title: "Female High Heel",
-      price: 29,
-      rating: "****",
-      img: femalehighheel,
-    },
-    {
-      id: 4,
-      title: "Ladies toe open",
-      price: 60,
-      rating: "*****",
-      img: Ladiestoeopen,
-    },
-    {
-      id: 5,
-      title: "Leather Brogues",
-      price: 30,
-      rating: "****",
-      img: leatherbrogues,
-    },
-    {
-      id: 6,
-      title: "Mens Choice",
-      price: 40,
-      rating: "***",
-      img: menstyle1,
-    },
-    {
-      id: 7,
-      title: "Mens chandle",
-      price: 34,
-      rating: "***",
-      img: menstyle2,
-    },
-    {
-      id: 8,
-      title: "Urban Sneaker",
-      price: 54,
-      rating: "****",
-      img: urbansneaker,
-    },
-    {
-      id: 9,
-      title: "White Sneaker",
-      price: 34,
-      rating: "****",
-      img: urbansneaker,
-    },
-    {
-      id: 10,
-      title: "Women Boot",
-      price: 34,
-      rating: "***",
-      img: womanboot,
-    },
-    {
-      id: 11,
-      title: "Women Jewel",
-      price: 24,
-      rating: "***",
-      img: womenjewel,
-    },
-    {
-      id: 12,
-      title: "Women Jewel",
-      price: 57,
-      rating: "*****",
-      img: addidas,
-    },
-    {
-      id: 13,
-      title: "Air Jordan",
-      price: 45,
-      rating: "*****",
-      img: airjordan,
-    },
-    {
-      id: 14,
-      title: "Brogue Late",
-      price: 65,
-      rating: "****",
-      img: brogue,
-    },
-    {
-      id: 15,
-      title: "Louis",
-      price: 26,
-      rating: "***",
-      img: louis,
-    },
-    {
-      id: 16,
-      title: "Nike Free",
-      price: 66,
-      rating: "*****",
-      img: nikefree,
-    },
-    {
-      id: 17,
-      title: "Nikon",
-      price: 36,
-      rating: "****",
-      img: nikon,
-    },
+    { id: 1, title: "Black Sneaker", price: 41, rating: "***", img: blacksneaker },
+    { id: 2, title: "Blue Sneaker", price: 37, rating: "***", img: bluesneaker },
+    { id: 3, title: "Female High Heel", price: 29, rating: "****", img: femalehighheel },
+    { id: 4, title: "Ladies toe open", price: 60, rating: "*****", img: Ladiestoeopen },
+    { id: 5, title: "Leather Brogues", price: 30, rating: "****", img: leatherbrogues },
+    { id: 6, title: "Mens Choice", price: 40, rating: "***", img: menstyle1 },
+    { id: 7, title: "Mens chandle", price: 34, rating: "***", img: menstyle2 },
+    { id: 8, title: "Urban Sneaker", price: 54, rating: "****", img: urbansneaker },
+    { id: 9, title: "White Sneaker", price: 34, rating: "****", img: urbansneaker },
+    { id: 10, title: "Women Boot", price: 34, rating: "***", img: womanboot },
+    { id: 11, title: "Women Jewel", price: 24, rating: "***", img: womenjewel },
+    { id: 12, title: "Women Jewel", price: 57, rating: "*****", img: addidas },
+    { id: 13, title: "Air Jordan", price: 45, rating: "*****", img: airjordan },
+    { id: 14, title: "Brogue Late", price: 65, rating: "****", img: brogue },
+    { id: 15, title: "Louis", price: 26, rating: "***", img: louis },
+    { id: 16, title: "Nike Free", price: 66, rating: "*****", img: nikefree },
+    { id: 17, title: "Nikon", price: 36, rating: "****", img: nikon },
+    { id: 18, title: "whitesneaker", price: 16, rating: "***", img: whitesneaker },
   ];
   return (
-    <div className="flex flex-col gap-8 justify-start items-left">
+    <div className="flex flex-col gap-8 justify-start items-left ">
       <h2 className="text-4xl font-bold text-orange-600 py-10 p-10">
         Our Trending Products
       </h2>

@@ -61,7 +61,7 @@ const Partners = () => {
     autoplay: true,
   };
   return (
-    <div className="w-full mx-auto ">
+    <div className="w-full mx-auto bg-gradient-to-r from-blue-100 via-blue-300 to-blue-500 my-10 pb-10 ">
       <h2 className="text-4xl text-center text-yellow-600 font-bold uppercase py-10">
         Our Local Partners
       </h2>
